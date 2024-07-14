@@ -25,7 +25,7 @@ const Dashboard = () => {
   return (
     <div className="px-5 mt-5">
       <div className="d-flex justify-content-center">
-        <h3>Dashboard List</h3>
+        <h3>Borrow History</h3>
       </div>
 
       <div className="mt-3">
