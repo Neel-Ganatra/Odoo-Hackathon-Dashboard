@@ -83,7 +83,7 @@ const User = () => {
             {currentUsers.map((user) => (
               <tr key={user.id}>
                 <td>{user.name}</td>
-                <td>{user.password}</td>
+                {/* <td>{user.password}</td> */}
                 <td>{user.address}</td>
                 <td>{user.email}</td>
                 <td>{user.phone}</td>
