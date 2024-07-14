@@ -119,14 +119,14 @@ const Login = () => {
               ></span>
             </div>
             {error && <p className="mastu-to-eroor mt-2">{error}</p>}
-            <div>
+            {/* <div>
               <span
                 className="Forgot-Password-span"
                 onClick={() => navigate("/ForgotPassword")}
               >
                 Forgot Password?
               </span>
-            </div>
+            </div> */}
             <div className="Login_link_divv">
               <button type="submit" className="login-btn-single">
                 Login
