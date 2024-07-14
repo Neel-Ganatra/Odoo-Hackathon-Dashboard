@@ -71,7 +71,7 @@ const User = () => {
           <thead>
             <tr>
               <th>Name</th>
-              <th>Password</th>
+              {/* <th>Password</th> */}
               <th>Address</th>
               <th>Email</th>
               <th>Phone</th>
