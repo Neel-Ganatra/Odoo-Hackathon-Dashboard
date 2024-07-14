@@ -1,19 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import axios from "axios";
+import axios from "../../utils/axios";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
-import Dashboard from "../Dashboard";
 
 // const [error, setError] = useState(null);
 const AddCategory = () => {
   const [category, setCategory] = useState({});
   const navigate = useNavigate();
-  const handlesubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3000/auth/add_Category", { category })
+      .post("/auth/add_Category", { category })
       .then((result) => {
         if (result.data.Status) {
           navigate("/category");
@@ -33,7 +29,7 @@ const AddCategory = () => {
         {/* <div className='text-danger'>{error && error}</div> */}
 
         <h1>Add Category</h1>
-        <form onSubmit={handlesubmit}>
+        <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="category">Category</label>
             <input

@@ -1,21 +1,22 @@
-import axios from "axios";
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import axios from "../../utils/axios";
+import { ROUTES } from "../../constants/routes";
 
-const Group = () => {
-  const [group, setGroup] = useState([]);
+const dashboard = () => {
+  const [dashboard, setDashboard] = useState([]);
   useEffect(() => {
+    const authToken = localStorage.getItem("authToken");
+
     axios
-      .get("http://localhost:3000/auth/group")
+      .get("/v1/borrow", {
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+        },
+      })
       .then((result) => {
-        if (result.data.Status) {
-          setGroup(result.data.Result);
-        }
-        // console.log(result.data)
-        else {
-          alert(result.data.Error);
-        }
+        setDashboard(result.data.data.borrows);
       })
       .catch((err) => {
         console.log(err);
@@ -24,24 +25,20 @@ const Group = () => {
   return (
     <div className="px-5 mt-5">
       <div className="d-flex justify-content-center">
-        <h3>Groups List</h3>
+        <h3>dashboard List</h3>
       </div>
-      <Link to="add_group" className="btn btn-success">
-        Add Groups
-      </Link>
+
       <div className="mt-3">
         <table className="table">
           <thead>
             <tr>
               <th>Name</th>
-              <th>Academic Id</th>
             </tr>
           </thead>
           <tbody>
-            {group.map((c) => (
+            {dashboard.map((c) => (
               <tr>
                 <td>{c.name}</td>
-                <td>{c.academic_id}</td>
               </tr>
             ))}
           </tbody>
@@ -51,4 +48,4 @@ const Group = () => {
   );
 };
 
-export default Group;
+export default dashboard;

@@ -1,41 +1,66 @@
+import React, { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./components/Login";
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import "bootstrap /dist/css/bootstrap.min.css";
-import Academics from "./components/Academics";
 import Dashboard from "./components/Dashboard";
-import Home from "./components/Home";
+import Books from "./components/books/Books";
+import AddBooks from "./components/books/AddBooks";
+import UpdateBooks from "./components/books/UpdateBooks";
 
-import AddCategory from "./components/category/AddCategory";
-import AddGroup from "./components/group/AddGroup";
-import Branch from "./components/Branch";
-import Category from "./components/category/Category";
-import Faculty from "./components/Faculty";
-import Group from "./components/group/Group";
-import Project from "./components/Project";
+import User from "./components/user/user";
+import AddUser from "./components/user/AddUser";
+import UpdateUser from "./components/user/UpdateUser";
+import DASHBOARD1 from "./components/dashboard/dashboard";
+
+import ProtectedRoute from "./constants/ProtectedRoute";
 import { ROUTES } from "./constants/routes";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+const Logout = () => {
+  const handleLogout = () => {
+    localStorage.removeItem("authToken");
+    window.location.href = ROUTES.LOGIN;
+  };
+
+  React.useEffect(() => {
+    handleLogout();
+  }, []);
+
+  return null;
+};
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Dashboard>
-          <Routes>
-            <Route path={ROUTES.LOGIN} element={<Login />} />
-            {/* <Route path="/dashboard" element={<Dashboard />} /> */}
-            <Route path={ROUTES.ACADEMIC} element={<Academics />} />
-            <Route path={ROUTES.BRANCH} element={<Branch />} />
-            <Route path={ROUTES.CATEGORY} element={<Category />} />
-            <Route path={ROUTES.FACULTY} element={<Faculty />} />
-            <Route path={ROUTES.GROUP} element={<Group />} />
-            <Route path={ROUTES.PROJECT} element={<Project />} />
-            <Route exact path={ROUTES.ADD_CATEGORY} element={<AddCategory />} />
-            <Route exact path={ROUTES.ADD_GROUP} element={<AddGroup />} />
-            <Route path={ROUTES.HOME} element={<Home />} />
-          </Routes>
-        </Dashboard>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Dashboard>
+        <Routes>
+          <Route
+            path={ROUTES.DASHBOARD1}
+            element={
+              <ProtectedRoute>
+                <DASHBOARD1 />
+              </ProtectedRoute>
+            }
+          />
+          <Route path={ROUTES.LOGIN} element={<Login />} />
+          <Route path={ROUTES.BOOKS} element={<Books />} />
+          <Route path={ROUTES.ADD_BOOKS} element={<AddBooks />} />
+          <Route path={ROUTES.UPDATE_BOOKS} element={<UpdateBooks />} />
+          <Route path={ROUTES.UPDATE_USER} element={<UpdateUser />} />
+          <Route
+            path={ROUTES.USER}
+            element={
+              <ProtectedRoute>
+                <User />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route path={ROUTES.ADD_USER} element={<AddUser />} />
+          <Route path={ROUTES.LOGOUT} element={<Logout />} />
+        </Routes>
+      </Dashboard>
+    </BrowserRouter>
   );
 }
 

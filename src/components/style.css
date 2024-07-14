@@ -1,4 +1,4 @@
-.loginPage{
+/* .loginPage{
     background: linear-gradient(rgba(11, 11, 11, 0.5), rgba(10, 10, 10, 0.5)), url('images/download.jpg') no-repeat center center fixed;
     
     background-repeat: no-repeat;
@@ -11,4 +11,364 @@
     background-color: rgba(1,32,93,0.6);
    color: white;
     
-}
+} */
+.Login-section-main-div {
+    width: 100%;
+    height: 100%;
+    background-color: #101618;
+    /* background-image: url(https://staging.soundbizapp.com/assets_ci/image0.jpeg); */
+  }
+  .Logo_main_imgg{
+    width: 250px;
+  }
+  /* .scroll-disabled {
+        overflow: hidden;
+      } */
+  .submit-div-he {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .Login-section-parent-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .group28-img {
+    width: 180px;
+    height: 95px;
+  }
+  
+  .login-img-img-div {
+    position: relative;
+    width: 60%;
+  }
+  
+  .align-self-div {
+    align-self: flex-start;
+    padding-left: 1rem;
+  }
+  
+  .image-text-75 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 80%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .image-text-text23 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 400;
+    width: 430px;
+  }
+  
+  .color-span-span12 {
+    color: #006ebd;
+  }
+  
+  .login-img-img {
+    width: 800px;
+    height: 745px;
+  }
+  
+  .backarrow-img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .back-span-span {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e2d38;
+  }
+  
+  .back-span-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .login-section-all-input-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 50%;
+  }
+  
+  .login-span-first {
+    font-size: 27px;
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  .adjusted-div {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .email-logo-container {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  
+  .email-logo {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .same-class-input-field {
+    width: 311px;
+    height: 45px;
+    border: 1px solid #dbdde2;
+    border-radius: 6px;
+    outline: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+  }
+  
+  .email-logo-container-div {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .Forgot-Password-span {
+    font-size: 15px;
+    font-weight: 600;
+    color: #00cffd;
+    cursor: pointer;
+  }
+  
+  .login-btn-single {
+    width: 311px;
+    height: 45px;
+    border-radius: 6px;
+    background: #00cffd;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .login-btn-single:hover {
+    background-color: #fff;
+    color: #00cffd;
+    border: 1px solid #00cffd;
+    transition: all 0.3s ease-out;
+  }
+  .margin-111-div {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .OR-Login-With-span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #1e2d38;
+  }
+  
+  .main-div-off-social-media-div22 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .google-width-media-div {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 1px solid #d8d8d8;
+    background-color: #fff;
+    color: #00cffd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .social-width-media-div {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background-color: #101618;
+    color: #00cffd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .smae-logo-for {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .dont-have-register-div {
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  .dont-have-register-span {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1e2d38;
+  }
+  
+  .only-register-span {
+    color: #00cffd;
+    font-weight: 600;
+  }
+  
+  .mastu-to-eroor {
+    color: red;
+  }
+  
+  .pass-t-a {
+    outline: none;
+    width: 225px;
+    height: 30px;
+    border: none;
+  }
+  .pass-t-a {
+    outline: none;
+    width: 225px;
+    height: 30px;
+    border: none;
+    /* background: #101618; */
+  }
+  .Passowrd_svg_divvv {
+    background: #fff;
+    border: 1px solid #dbdde2;
+    border-radius: 6px;
+    width: 311px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding-left: 0.4rem;
+  }
+  .dado-img-login-dono {
+    position: relative;
+  }
+  
+  .sado-hu-me {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 800px;
+    height: 745px;
+  }
+  
+  @media screen and (max-width: 1440px) {
+    .sado-hu-me {
+      width: 750px;
+      height: 600px;
+    }
+  
+    .login-img-img {
+      width: 750px;
+      height: 600px;
+    }
+  }
+  
+  @media screen and (max-width: 884px) {
+    .Login-section-parent-div {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  
+    .login-img-img-div {
+      display: flex;
+      width: 100%;
+    }
+  
+    .login-img-img {
+      width: 100%;
+    }
+  
+    .sado-hu-me {
+      width: 100%;
+    }
+  
+    .image-text-75 {
+      gap: 4rem;
+    }
+  
+    .login-section-all-input-div {
+      width: 100%;
+    }
+  
+    .dado-img-login-dono {
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 428px) {
+    .image-text-75 {
+      align-items: center;
+      gap: 0rem;
+    }
+  
+    .image-text-text23 {
+      width: auto;
+      padding-left: 1.5rem;
+      font-size: 25px;
+    }
+  
+    .group28-img {
+      width: 100px;
+      height: 80px;
+      padding-right: 1.5rem;
+    }
+  
+    .login-section-all-input-div {
+      width: 100%;
+    }
+  
+    /*  */
+  }
+  
+  @media screen and (max-width: 390px) {
+    .image-text-75 {
+      gap: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    .login-section-all-input-div {
+      gap: 0.5rem;
+    }
+    .Login-section-parent-div {
+      height: 100vh;
+    }
+    .pass-t-a {
+      outline: none;
+      width: 183px;
+    }
+  }
+  
